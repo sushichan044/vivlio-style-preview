@@ -1,0 +1,15 @@
+@page {
+  margin: 20mm;
+
+  size: 182mm 257mm;
+}
+
+body {
+  font-family: serif;
+  line-height: 1.9;
+}
+
+h1 {
+  color: #a33;
+  border-bottom: 2px solid #a33;
+}

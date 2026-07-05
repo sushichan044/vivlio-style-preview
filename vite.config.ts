@@ -9,6 +9,7 @@ import { defineConfig, lazyPlugins } from "vite-plus";
 import { playwright } from "vite-plus/test/browser-playwright";
 
 import { configureLocalNetwork, configureSourcemapPerEnvironment } from "./dev/vite-plugin";
+import { vivliostyleConfig } from "./dev/vivliostyle-config-plugin";
 
 export default defineConfig((env) => ({
   fmt: {
@@ -94,7 +95,16 @@ export default defineConfig((env) => ({
     }),
     devtoolsJson(),
     tailwindcss(),
+    vivliostyleConfig(),
   ]),
+
+  optimizeDeps: {
+    // `@vivliostyle/core` is intentionally omitted: it's a transitive
+    // dependency of `@vivliostyle/react` (not a direct one), and pnpm's
+    // non-flat node_modules layout means Vite can't resolve a bare
+    // `optimizeDeps.include` entry for it from the project root.
+    include: ["@uiw/react-codemirror", "@vivliostyle/react", "@vivliostyle/vfm"],
+  },
 
   test: {
     passWithNoTests: true,
@@ -130,7 +140,7 @@ export default defineConfig((env) => ({
       },
 
       dev: {
-        command: "react-router dev"
+        command: "react-router dev",
       },
 
       check: {
