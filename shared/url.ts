@@ -1,4 +1,4 @@
-export const localhost = "127.0.0.1";
+export const localhost = "localhost";
 export const localPort = 5173;
 export const localOrigin = `http://${localhost}:${localPort}`;
 

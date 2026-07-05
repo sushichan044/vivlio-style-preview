@@ -129,6 +129,10 @@ export default defineConfig((env) => ({
         command: "react-router build",
       },
 
+      dev: {
+        command: "react-router dev"
+      },
+
       check: {
         command: ["vp check", "tsgo -b --noEmit"],
         dependsOn: ["generate"],
