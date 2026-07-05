@@ -1,0 +1,42 @@
+{
+  "name": "hono-react-router-cf-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "node -e \"process.env.CI || process.exit(1)\" || vp run generate:types"
+  },
+  "dependencies": {
+    "@base-ui/react": "1.6.0",
+    "hono": "4.12.27",
+    "isbot": "5.1.44",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "react-router": "8.1.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.43.0",
+    "@iconify/json": "2.2.495",
+    "@react-router/dev": "8.1.0",
+    "@rolldown/plugin-babel": "^0.2.3",
+    "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@tailwindcss/vite": "4.3.2",
+    "@types/node": "26.1.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@typescript/native-preview": "7.0.0-dev.20260703.1",
+    "@virtual-live-lab/tsconfig": "2.1.23",
+    "@vitejs/plugin-react": "^6.0.3",
+    "@vitest/browser-playwright": "4.1.9",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "tailwindcss": "4.3.2",
+    "typescript": "6.0.3",
+    "unplugin-icons": "23.0.1",
+    "vite": "npm:@voidzero-dev/vite-plus-core@^0.2.2",
+    "vite-plugin-devtools-json": "1.0.0",
+    "vite-plus": "^0.2.2",
+    "vitest-browser-react": "2.2.0",
+    "wrangler": "4.107.0"
+  },
+  "packageManager": "pnpm@11.0.9"
+}

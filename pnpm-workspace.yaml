@@ -1,0 +1,13 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true
+
+configDependencies:
+  "@pnpm/pacquet": 0.11.12
+
+overrides:
+  vite: "npm:@voidzero-dev/vite-plus-core@latest"
+
+patchedDependencies:
+  hono@4.12.27: patches/hono@4.12.27.patch
