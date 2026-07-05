@@ -1,0 +1,1 @@
+/Users/sushichan044/workspace/github.com/sushichan044/vivlio-style-preview/.agents/skills/react-router/references/data-mode.md
