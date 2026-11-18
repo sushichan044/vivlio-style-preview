@@ -13,7 +13,12 @@ import { vivliostyleConfig } from "./dev/vivliostyle-config-plugin";
 
 export default defineConfig((env) => ({
   fmt: {
-    ignorePatterns: ["pnpm-lock.yaml", "**/*/worker-configuration.d.ts", "shared/db/migrations/**"],
+    ignorePatterns: [
+      ".agents/**",
+      "pnpm-lock.yaml",
+      "**/*/worker-configuration.d.ts",
+      "shared/db/migrations/**",
+    ],
     jsdoc: {
       commentLineStrategy: "multiline",
     },
